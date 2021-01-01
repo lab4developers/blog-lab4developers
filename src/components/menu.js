@@ -11,9 +11,10 @@ const Menu = () => (
             <span>L4Devs</span>
         </a>
         <div className="flex flex-row space-x-20 w-full justify-end">
-            <a href="#">Ínicio</a>
+            <a href="#">Início</a>
+            <a href="#">Categorias</a>
             <a href="#">Sobre</a>
-            <a href="#">Artigos</a>
+            <a href="#">Contato</a>
         </div>
     </div>
 );

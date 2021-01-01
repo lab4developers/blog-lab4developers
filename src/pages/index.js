@@ -1,9 +1,12 @@
 import React from "react";
 
-import Header from "../components/header";
+import PageLayout from "../components/page-layout";
+import TablePosts from "../components/table-posts";
 
 const IndexPage = () => (
-    <Header />
+    <PageLayout>
+        <TablePosts />
+    </PageLayout>
 );
 
 export default IndexPage;
