@@ -2,5 +2,5 @@ module.exports = {
   siteMetadata: {
     title: "blog-lab4developers",
   },
-  plugins: [],
+  plugins: ['gatsby-plugin-postcss'],
 };
