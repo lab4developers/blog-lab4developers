@@ -1,48 +1,48 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby minimal starter
-</h1>
+# Blog Lab4Developers
 
-## 🚀 Quick start
+Esse projeto é o funcionamento de um blog, o Lab4Developers, que tem como objetivo apresentar artigos e tutoriais para todo dev. A ideia principal é ser como um verdadeiro laboratório, apresentando tutoriais e assuntos para iniciantes e mostrando testes que podem ajudar no desenvolvimento de um projeto.
 
-1.  **Create a Gatsby site.**
+Também deseja-se descrever os projetos realizados. Tudos isso para um melhor aprendizado dos assuntos propostos, tanto por quem escreve, como por quem lê.
 
-    Use the Gatsby CLI to create a new site, specifying the minimal starter.
+## Pré Requisitos
 
-    ```shell
-    # create a new Gatsby site using the minimal starter
-    npm init gatsby
-    ```
+Esse é um projeto **Gatsby**, framework React, que permite a geração de páginas estáticas.
 
-2.  **Start developing.**
+Além disso, é utilizado como backend o **Strapi**. Uma plataforma aberta que tem como objetivo ser um Headless CMS.
 
-    Navigate into your new site’s directory and start it up.
+Outra tecnologia importante utilizada foi o **Tailwind CSS** como framework CSS. Ele nos possibilita uma grande facilidade para estilizar as nossas páginas e componentes.
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
+Os pacotes foram adicionados usando o **yarn**. Assim, todos os comandos apresentados é utilizado esse gerenciador de pacotes npm.
 
-3.  **Open the code and start customizing!**
+### Instalação do Tailwind CSS
 
-    Your site is now running at http://localhost:8000!
+Foi seguido o tutorial do Tailwind apresentado na página do próprio framework disponível [aqui]("https://tailwindcss.com/docs/guides/gatsby").
 
-    Edit `src/pages/index.js` to see your site update in real-time!
+```shell
+  yarn add gatsby-plugin-postcss tailwindcss@latest \
+           postcss@latest autoprefixer@latest
 
-4.  **Learn more**
+  npx tailwindcss init -p
+```
 
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+### Instalação do Strapi
 
-    - [Tutorials](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+O Strapi foi instalado e foi criado um projeto para servir como Backend (esse estará sendo colocado no GitHub também com o tutorial de montagem).
 
-    - [Guides](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+Precisamos instalar o plugin do strapi e para isso, fazemos:
 
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+```shell
+  yarn add gatsby-source-strapi
+```
 
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+Depois, ajustamos o nosso arquivo *gatsby-config.js* de acordo com as instruções da página de instalação do plugin disponível [aqui](https://www.gatsbyjs.com/plugins/gatsby-source-strapi/).
 
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+No caso desse projeto, usamos um arquivo ".env" com as variáveis de ambiente e colocamos um require e adicionamos uma condição no nosso *gatsby-config.js*.
+
+### Outras instalações
+
+Também foram instalados alguns outros pacotes necessários para utilização dos recursos do Strapi e transformação do conteúdo do formato MarkDown para o formato HTML. Assim, adicionamos:
+
+```shell
+  yarn add react-markdown react-moment moment
+```
