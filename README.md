@@ -46,3 +46,9 @@ Também foram instalados alguns outros pacotes necessários para utilização do
 ```shell
   yarn add react-markdown react-moment moment
 ```
+
+Foi instalado os componentes de imagem. Assim, foi rodado o comando:
+
+```shell
+  yarn add gatsby-source-filesystem gatsby-transformer-sharp gatsby-plugin-sharp gatsby-image
+```

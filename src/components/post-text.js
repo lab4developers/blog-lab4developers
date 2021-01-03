@@ -1,21 +1,41 @@
 import React from "react";
+import Img from "gatsby-image";
+import Markdown from "react-markdown";
 
-const TextPost = () => (
-    <div className="flex flex-col space-y-5 px-52 py-10">
-        <h1 className="font-semibold leading-10 tracking-wider text-2xl text-gray-700">
-            Seção 1.10.32 de "de Finibus Bonorum et Malorum"
-        </h1>
-        
-        <div className="flex flex-col space-y-4">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+const TextPost = ({data}) => {
+    const article = data.strapiArticle;
 
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    return (<div className="flex flex-row space-x-5">
+        <div className="flex flex-col space-y-5 px-52 py-10 w-10/12">
+            <h1 className="font-semibold leading-10 tracking-wider text-2xl text-gray-600">
+                {article.title}
+            </h1>
+            
+            <div className="flex flex-col space-y-4 text-gray-600">
+                <Img fluid={article.image.childImageSharp.fluid} className="p-10" />
 
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <Markdown source={article.content} escapeHtml={false} />
+            </div>
         </div>
-    </div>
-);
+
+        
+    </div>);
+};
 
 export default TextPost;
+
+/**
+ * Sumário retirado por enquanto...
+ * <div className="text-gray-500 flex flex-col space-y-1 py-10 w-2/12">
+            <h1 className="font-semibold">Sumário</h1>
+
+            <ul>
+                <li>asdasdasdas</li>
+                <li><span className="pl-2">asdasdasdas</span></li>
+                <li>asdasdasdas</li>
+                <li>asdasdasdas</li>
+                <li>asdasdasdas</li>
+            </ul>
+        </div>
+ * 
+ */

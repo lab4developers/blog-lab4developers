@@ -1,5 +1,4 @@
 import React from "react";
-//import { Terminal } from "react-feather";
 
 import Menu from "./menu";
 import IconLab from "./icon-lab";
