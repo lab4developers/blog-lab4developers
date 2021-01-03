@@ -3,6 +3,7 @@ require('dotenv').config({
 });
 
 module.exports = {
+  pathPrefix: "/blog-lab4developers",
   siteMetadata: {
     title: 'blog-lab4developers',
   },
